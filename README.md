@@ -43,6 +43,13 @@ Fastest is elliptic#ecdh
 
 ## API
 
+> Note: This library does NOT hash the signed data, you must hash it manually.
+```javascript
+// Example of SHA256 hash with hash.js (use your prefered hash library)
+var hash = require('hash.js');
+var msgHash = hash.sha256().update(data_to_be_signed_or_verified).digest('hex');
+```
+
 ### ECDSA
 
 ```javascript
